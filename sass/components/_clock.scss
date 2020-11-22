@@ -1,0 +1,93 @@
+.clock {
+    width: 35rem;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../img/clock.png);
+    background-size: cover;
+    border-radius: 50%;
+    margin-left: 15rem;
+    // box-shadow: 0 -1.5rem 1.5rem rgba(255, 255, 255, 0.05),
+    //             inset 0 -1.5rem 1.5rem rgba(255, 255, 255, 0.05),
+    //             0 1.5rem 1.5rem rgba(0, 0, 0, 0.05),
+    //             inset 0 1.5rem 1.5rem rgba(0, 0, 0, 0.05);
+    @include clockmorphism;
+
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 1.9rem;
+        height: 1.9rem;
+        background: $color_off_white;
+        border-radius: 50%;
+        z-index: 100000;
+    }
+
+    &_hour,
+    &_min,
+    &_sec {
+        position: absolute;
+    }
+
+    & &_hour, &_hour_hr {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    & &_min, &_min_mn {
+        width: 19rem;
+        height: 19rem;
+    }
+
+    & &_sec, &_sec_sc {
+        width: 23rem;
+        height: 23rem;
+    }
+
+    &_hour_hr,
+    &_min_mn,
+    &_sec_sc {
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    &_hour_hr:before {
+        content: '';
+        position: absolute;
+        width: .8rem;
+        height: 8rem;
+        background: $color_clock_hour;
+        box-shadow: 0 0 1.4rem $color_clock_hour;
+        z-index: 10;
+        border-radius: .6rem .6rem 0rem 0rem;
+    }
+
+    &_min_mn:before {
+        content: '';
+        position: absolute;
+        width: .6rem;
+        height: 9rem;
+        background: $color_clock_min;
+        box-shadow: 0 0 1.4rem $color_clock_min;
+        z-index: 11;
+        border-radius: .6rem .6rem 0rem 0rem;
+    }
+
+    &_sec_sc:before {
+        content: '';
+        position: absolute;
+        width: .38rem;
+        height: 15rem;
+        background: $color_clock_sec;
+        box-shadow: 0 0 1.4rem $color_clock_sec;
+        z-index: 12;
+        border-radius: .6rem .6rem 0rem 0rem;
+    }
+}
+
+

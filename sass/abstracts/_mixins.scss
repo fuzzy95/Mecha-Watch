@@ -1,0 +1,42 @@
+@mixin neumorphism {
+    box-shadow: .9rem .9rem 1.8rem $color_nav_menu_light, 
+                -.9rem -.9rem 1.8rem $color_nav_menu_dark;
+}
+
+@mixin neumorphismText {
+    text-shadow: -.9rem -.9rem 1.8rem $color_nav_menu_dark, 
+                .9rem .9rem 1.8rem $color_nav_menu_light;
+}
+
+@mixin neumorphismHover {
+    box-shadow: inset .9rem .9rem 1.8rem $color_nav_menu_light, 
+                inset -.9rem -.9rem 1.8rem $color_nav_menu_dark;
+}
+
+@mixin neumorphismTextHover {
+    text-shadow: inset -.9rem -.9rem 1.8rem $color_nav_menu_dark, 
+                inset .9rem .9rem 1.8rem $color_nav_menu_light;
+}
+
+@mixin clockmorphism {
+    border: 6px solid $color_background_main;
+    box-shadow: -.9rem -.9rem 1.8rem $color_nav_menu_dark,
+                inset -.9rem -.9rem 1.8rem $color_nav_menu_dark,
+                .9rem .9rem 1.8rem $color_nav_menu_light,
+                inset .9rem .9rem 1.8rem $color_nav_menu_light;
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

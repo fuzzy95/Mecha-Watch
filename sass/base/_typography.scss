@@ -1,0 +1,108 @@
+body {
+    background: $color_background_main;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+}
+
+.heading_primary {
+    margin-bottom: 6rem;
+
+    &__main {
+        color: $color_background_main;
+        text-decoration: none;
+        font-size: 13rem;
+        font-family: 'Lobster', cursive;
+        font-weight: 400;
+        @include clockmorphism;
+        @include neumorphismText;
+        border-radius: 1.3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        transition: .3s;
+
+        &:hover {
+            cursor: pointer;
+            color: $color_quaternary_dark;
+            // text-shadow: 0 0 1.4rem $color_quaternary_dark;
+            // @include neumorphismHover;
+            border-radius: 1.3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            @include neumorphism;
+            transform: translate(.1rem) translateY(.4rem);
+        }
+    }
+
+    &__sub {
+        color: $color_quaternary_dark;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 4rem;
+        font-weight: 800;
+    }
+
+    &__feature {
+        color: $color_background_main;
+        text-decoration: none;
+        font-size: 8rem;
+        font-weight: 800;
+        @include clockmorphism;
+        @include neumorphismText;
+        border-radius: 1.3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        transition: .3s;
+
+        &:hover {
+            cursor: pointer;
+            color: $color_quaternary_dark;
+            // text-shadow: 0 0 1.4rem $color_quaternary_dark;
+            // @include neumorphismHover;
+            border-radius: 1.3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            @include neumorphism;
+            transform: translate(.1rem) translateY(.4rem);
+        }
+    }
+
+    &__products {
+        color: $color_background_main;
+        text-decoration: none;
+        font-size: 8rem;
+        font-weight: 800;
+        @include clockmorphism;
+        @include neumorphismText;
+        border-radius: 1.3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        transition: .3s;
+
+        &:hover {
+            cursor: pointer;
+            color: $color_quaternary_dark;
+            // text-shadow: 0 0 1.4rem $color_quaternary_dark;
+            // @include neumorphismHover;
+            border-radius: 1.3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            @include neumorphism;
+            transform: translate(.1rem) translateY(.4rem);
+        }
+    }
+}
+
+.heading_secondary {
+    color: $color_quaternary_dark;
+    margin-bottom: 3rem;
+    text-decoration: none;
+    font-size: 5rem;
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+    border-radius: 1.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: .3s;
+}
+
+

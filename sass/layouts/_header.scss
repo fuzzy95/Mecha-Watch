@@ -1,0 +1,17 @@
+.header {
+    background: $color_background_main;
+    display: grid;
+    min-height: 80vh;
+    grid-template-columns: 10% repeat(2, minmax(5rem, 1fr)) 10%;
+
+    &__text_box {
+        grid-column: 2/2;
+        align-self: center;
+    }
+
+    &__clock {
+        align-self: center;
+        object-fit: cover;
+        justify-self: center;
+    }
+}

@@ -1,0 +1,110 @@
+.p_card {
+    width: 35rem;
+    margin: 2.8rem;
+    padding: 4rem 3rem;
+    background: $color_background_main;
+    // @include neumorphism;
+    @include clockmorphism;
+    border-radius: 1rem;
+
+    margin-bottom: 5rem;
+
+    &_image{
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        
+        &_main {
+            height: 20rem;
+            background-size: cover;
+        }
+    }
+
+    &_title {
+        font-size: 3.8rem;
+        margin-bottom: 1rem;
+        letter-spacing: .2rem;
+        text-align: center;
+
+        & a {
+            text-decoration: none;
+            color: $color_quaternary_dark;
+            // text-shadow: 0 0 1.4rem $color_quaternary_dark;
+        }
+    }
+
+    &_btn {
+        display: flex;
+        justify-content: center;
+    
+        & a {
+            text-decoration: none;
+            cursor: pointer;
+            transition: .3s;
+            color: $color_grey_dark_2;
+        }
+
+        &_small {
+            display: inline-block;
+            font-size: 1.4rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: .8rem 3.3rem;
+            border-radius: 1.9rem;
+            @include clockmorphism;
+            transition: .3s;
+
+            &:hover {
+                @include neumorphism;
+                transform: translateY(.2rem);
+            transition: .3s;
+            }
+        }
+    
+        &_round {
+            display: inline-block;
+            font-size: 3rem;
+            margin-left: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+            height: 4.5rem;
+            width: 4.5rem;
+            border-radius: 50%;
+            text-decoration: none;
+            @include neumorphism;
+
+            &:hover {
+                @include neumorphismHover;
+                transform: translate(.4rem) translateY(.4rem);
+            }
+        }
+    }
+
+    &_text_button {
+        display: inline-block;
+        padding: 1rem 1.7rem;
+        margin-top: 4.5rem;
+        margin-left: 45.5%;
+        margin-right: 45.5%;
+        border-radius: 1rem;
+        color: $color_grey_dark_2;
+        // text-shadow: 0 0 1.4rem $color_grey_dark_2;
+        font-size: 1.9rem;
+        text-decoration: none;
+        @include neumorphism;
+        transition: .3s;
+
+        &:hover {
+            @include neumorphismHover;
+            transform: translate(-.4rem) translateY(.4rem);
+        } 
+    }
+    
+
+    &:hover {
+        @include neumorphism;
+        transform: translate(.1rem) translateY(.4rem);
+        transition: .3s;
+    }
+
+}

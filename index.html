@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/icon_logo_1.png">
+
+    <script src="https://use.fontawesome.com/e35f5e38a7.js"></script>
+
+    <title>Mecha-Watch</title>
+</head>
+<body>
+    <main>
+
+<!----------------------------------- navbar section ------------------------------------->
+
+        <div class="navigation">
+            <nav class="nav">
+                <div class="nav_logo">
+                    <a href="#">
+                        <img src="img/logo_final_trans.png" alt="Mecha-Watch" class="nav_logo_image">
+                    </a>
+                </div>
+                <ul class="nav_list">
+                    <li class="nav_list_li"><a href="#">Home</a></li>
+                    <li class="nav_list_li"><a href="#section_feature">Features</a></li>
+                    <li class="nav_list_li"><a href="#">About Us</a></li>
+                    <li class="nav_list_li"><a href="#section_product">Order</a></li>
+                </ul>
+            </nav>
+        </div>
+
+<!----------------------------------- header section ------------------------------------->
+
+        <header class="header">
+            <div class="header__text_box">
+                <h1 class="heading_primary">
+                    <span class="heading_primary__main">Mecha-Watch</span>
+                    <span class="heading_primary__sub">Time & Tide waits for none.</span>
+                </h1>
+            </div>
+            
+            <div class="header__clock clock">
+                <div class="clock_hour">
+                    <div class="clock_hour_hr" id="clock_hour_hr"></div>
+                </div>
+
+                <div class="clock_min">
+                    <div class="clock_min_mn" id="clock_min_mn"></div>
+                </div>
+
+                <div class="clock_sec">
+                    <div class="clock_sec_sc" id="clock_sec_sc"></div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                const deg = 6;
+                const clock_hour_hr = document.querySelector("#clock_hour_hr");
+                const clock_min_mn = document.querySelector("#clock_min_mn");
+                const clock_sec_sc = document.querySelector("#clock_sec_sc");
+
+                setInterval(() => {
+                    let day = new Date();
+                    let hh = day.getHours() * 30;
+                    let mm = day.getMinutes() * deg;
+                    let ss = day.getSeconds() * deg;
+
+                    clock_hour_hr.style.transform = `rotateZ(${(hh) + (mm / 12)}deg)`;
+                    clock_min_mn.style.transform = `rotateZ(${mm}deg)`;
+                    clock_sec_sc.style.transform = `rotateZ(${ss}deg)`;
+                });
+            </script>
+        </header>
+
+<!----------------------------------- feature section ------------------------------------->
+
+        <secion class="section_feature" id="section_feature">
+            <div class="section_feature_heading">
+                <h1 class="heading_primary">
+                    <span class="heading_primary__feature">Features</span>
+                </h1>
+            </div>
+            <div class="section_feature_card_1 f_card">
+                <div class="f_card_image">
+                    <i class="fa fa-superpowers" aria-hidden="true"></i>                    
+                </div>
+
+                <div class="f_card_text">
+                    <h2 class="f_card_text_heading">Elegant</h2>
+                    <p class="f_card_text_p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio nam ex voluptates, quia dolores quibusdam?
+                    </p>
+                    <a href="#" class="f_card_text_button">Read More</a>
+                </div>
+            </div>
+
+            <div class="section_feature_card_2 f_card">
+                <div class="f_card_image">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>                    
+                </div>
+
+                <div class="f_card_text">
+                    <h2 class="f_card_text_heading">Exact</h2>
+                    <p class="f_card_text_p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio nam ex voluptates, quia dolores quibusdam?
+                    </p>
+                    <a href="#" class="f_card_text_button">Read More</a>
+                </div>
+            </div>
+
+            <div class="section_feature_card_3 f_card">
+                <div class="f_card_image">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>                    
+                </div>
+
+                <div class="f_card_text">
+                    <h2 class="f_card_text_heading">Absolute</h2>
+                    <p class="f_card_text_p">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio nam ex voluptates, quia dolores quibusdam?
+                    </p>
+                    <a href="#" class="f_card_text_button">Read More</a>
+                </div>
+            </div>
+        </secion>
+
+<!----------------------------------- product section ------------------------------------->
+        
+        <section class="section_product" id="section_product">
+            <div class="section_product_heading">
+                <h1 class="heading_primary">
+                    <span class="heading_primary__products">Products</span>
+                </h1>
+            </div>
+
+            <div class="section_product_cards">
+                <div class="p_card">
+                    <div class="p_card_image">
+                        <img src="img/rolex_2.png" alt="rolex" class="p_card_image_main">
+                    </div>
+                    
+                    <div class="p_card_title">
+                        <h3 class="p_card_title_heading"><a href="#">Rolex</a></h3>
+                    </div>
+                    
+                    <div class="p_card_btn">
+                        <a href="#" class="p_card_btn_small mr_2">$2000</a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="p_card">
+                    <div class="p_card_image">
+                        <img src="img/rolex_3.png" alt="rolex" class="p_card_image_main">
+                    </div>
+                    
+                    <div class="p_card_title">
+                        <h3 class="p_card_title_heading"><a href="#">Vincent</a></h3>
+                    </div>
+                    
+                    <div class="p_card_btn">
+                        <a href="#" class="p_card_btn_small mr_2">$9999</a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="p_card">
+                    <div class="p_card_image">
+                        <img src="img/rolex_4.png" alt="rolex" class="p_card_image_main">
+                    </div>
+                    
+                    <div class="p_card_title">
+                        <h3 class="p_card_title_heading"><a href="#">Jaeger</a></h3>
+                    </div>
+                    
+                    <div class="p_card_btn">
+                        <a href="#" class="p_card_btn_small mr_2">$6669</a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="p_card">
+                    <div class="p_card_image">
+                        <img src="img/rolex_5.png" alt="rolex" class="p_card_image_main">
+                    </div>
+                    
+                    <div class="p_card_title">
+                        <h3 class="p_card_title_heading"><a href="#">Vacheron</a></h3>
+                    </div>
+                    
+                    <div class="p_card_btn">
+                        <a href="#" class="p_card_btn_small mr_2">$1500</a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section_product_cards">
+                <div class="p_card">
+                    <div class="p_card_image">
+                        <img src="img/rolex_5.png" alt="rolex" class="p_card_image_main">
+                    </div>
+                    
+                    <div class="p_card_title">
+                        <h3 class="p_card_title_heading"><a href="#">Rolex</a></h3>
+                    </div>
+                    
+                    <div class="p_card_btn">
+                        <a href="#" class="p_card_btn_small mr_2">$2000</a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="p_card">
+                    <div class="p_card_image">
+                        <img src="img/rolex_4.png" alt="rolex" class="p_card_image_main">
+                    </div>
+                    
+                    <div class="p_card_title">
+                        <h3 class="p_card_title_heading"><a href="#">Rolex</a></h3>
+                    </div>
+                    
+                    <div class="p_card_btn">
+                        <a href="#" class="p_card_btn_small mr_2">$2000</a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="p_card">
+                    <div class="p_card_image">
+                        <img src="img/rolex_3.png" alt="rolex" class="p_card_image_main">
+                    </div>
+                    
+                    <div class="p_card_title">
+                        <h3 class="p_card_title_heading"><a href="#">Rolex</a></h3>
+                    </div>
+                    
+                    <div class="p_card_btn">
+                        <a href="#" class="p_card_btn_small mr_2">$2000</a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="p_card">
+                    <div class="p_card_image">
+                        <img src="img/rolex_2.png" alt="rolex" class="p_card_image_main">
+                    </div>
+                    
+                    <div class="p_card_title">
+                        <h3 class="p_card_title_heading"><a href="#">Rolex</a></h3>
+                    </div>
+                    
+                    <div class="p_card_btn">
+                        <a href="#" class="p_card_btn_small mr_2">$2000</a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <a href="#" class="p_card_btn_round mr_2"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="p_card_text_button">Read More</a>
+        </section>
+
+<!----------------------------------- footer section ------------------------------------->
+
+        <footer class="footer">
+            <div class="footer_header">
+                <h2 class="heading_secondary">Mecha-Watch</h2>
+                <p class="footer_text">Built by <a href="#" class="footer_text_link">FuzzY</a> for Practice. Copyright &copy; by FuzzY. You are allowed to use it as you like to.</p>
+            </div>
+
+            <ul class="footer_ul">
+                <li class="footer_ul_li"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li class="footer_ul_li"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li class="footer_ul_li"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+</html>
+
+<!-- <section class="grid_test">
+    <div class="row">
+        <div class="col_1_of_2">
+            col 1 of 2
+        </div>
+        <div class="col_1_of_2">
+            col 1 of 2
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col_1_of_3">
+            col 1 of 3
+        </div>
+        <div class="col_1_of_3">
+            col 1 of 3
+        </div>
+        <div class="col_1_of_3">
+            col 1 of 3
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col_1_of_3">
+            col 1 of 3
+        </div>
+        <div class="col_2_of_3">
+            col 2 of 3
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col_1_of_4">
+            col 1 of 4
+        </div>
+        <div class="col__of_4">
+            col 1 of 4
+        </div>
+        <div class="col_1_of_4">
+            col 1 of 4
+        </div>
+        <div class="col_1_of_4">
+            col 1 of 4
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col_1_of_4">
+            col 1 of 4
+        </div>
+        <div class="col_1_of_4">
+            col 1 of 4
+        </div>
+        <div class="col_2_of_4">
+            col 2 of 4
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col_1_of_4">
+            col 1 of 4
+        </div>
+        <div class="col_3_of_4">
+            col 3 of 4
+        </div>
+    </div>
+</section> -->

@@ -1,0 +1,67 @@
+.f_card {
+    width: 40rem;
+    margin: 20px;
+    padding: 4rem 3rem;
+    background: $color_background_main;
+    @include neumorphism;
+    border-radius: 1rem;
+
+    
+
+    &_image {
+        position: relative;
+        text-align: center;
+        font-size: 12rem;
+        color: $color_quaternary_dark;
+        // text-shadow: 0 0 1.4rem $color_nav_hover;
+    }
+
+    &_text {
+        position: relative;
+        margin-top: 2rem;
+        text-align: center;
+
+        &_heading {
+            color: $color_clock_min;
+            // text-shadow: 0 0 1.4rem $color_clock_min;
+            font-size: 3.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: .2rem;
+
+            &:hover {
+                text-shadow: 0 0 1.4rem $color_clock_min;
+            }
+        }
+
+        &_p {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: $color_quaternary_dark;
+            // text-shadow: 0 0 1.4rem $color_clock_hour;
+        }
+
+        &_button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin-top: 1.5rem;
+            border-radius: 1rem;
+            color: $color_clock_min;
+            // text-shadow: 0 0 1.4rem $color_clock_min;
+            font-size: 1.9rem;
+            text-decoration: none;
+            @include neumorphism;
+            transition: .3s;
+
+            &:hover {
+                @include neumorphismHover;
+                transform: translate(-.4rem) translateY(.4rem);
+            } 
+        }
+    }
+
+    &:hover {
+        @include neumorphismHover;
+        transform: translate(-.4rem) translateY(.4rem);
+        transition: .3s;
+    }
+}

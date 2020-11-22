@@ -1,0 +1,67 @@
+.navigation {
+    background: $color_background_main;
+}
+
+.nav {
+    width: 80%;
+    margin: auto;
+    min-height: 10vh;
+    padding: 3rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_list {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        list-style: none;
+        
+
+        &_li {
+            min-width: 14rem;
+            font-weight: 800;
+            color: $color_background_main;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 1.3rem;
+            margin: 0 1.5rem;
+            @include neumorphism;
+        }
+
+        &_li a{
+            text-decoration: none;
+            color: $color_quaternary_dark;
+        }
+
+        &_li:hover,
+        &_li:active,
+        &_li:active a,
+        &_li:hover a {
+            cursor: pointer;
+            @include neumorphismHover;
+            transform: translate(-.4rem) translateY(.4rem);
+            color: $color_quaternary_dark;
+            text-shadow: 0 0 1.4rem $color_quaternary_dark;
+            transition: .3s;
+        }
+    }
+
+    &_logo {
+        margin-right: 50rem;
+        border-radius: 1.3rem;
+        @include neumorphism;
+        &_image {
+            height: 12rem;
+        }
+
+        &_image:hover {
+            border-radius: 1.3rem;
+            @include neumorphismHover;
+            transform: translate(-.4rem) translateY(.4rem);
+            transition: .3s;
+        }
+    }
+}
